@@ -8,3 +8,9 @@ print("hello\nworld")       #can print out 2 lines of strings for one line of co
 print("hello\nworld\n")     #can add a new blank line to print
 print("hello" + "mebz")     #combines 2 strings, no space in between
 print("hello " + "mebz")    #combines 2 strings
+
+input("what is your name?")                             #accepts an input
+print("hello " + input("what is your name?") + "!")     #nested, accepts an input then prints the input & strings together
+
+s = 'hehe'                  #assigns a value to s
+print(len(s))               #gets the length of s then prints the length
