@@ -1,0 +1,18 @@
+#data types
+print("hello"[0])   #subscripting:  prints the first character of the string, programs always start counting from 0
+print("123" + "4")  #numbers enclosed in double quotes are treated as a string
+print(123)          #prints an integer
+print(123 + 4)      #adds up two numbers
+print(1_000_000)    #underscore splits large numbers to be readable but won't be printed together with the number
+print(3.14)         #prints a float
+print(True)         #prints a boolean data type
+
+#avoiding errors when it comes to data types
+name = len(input("Input: "))                    #accepts an input and stores it in a variable
+print(type(name))                               #prints the data type of the variable
+newName = str(name)                             #typecasting: changes the data type, converted integer into string
+print("Input has " + newName + " characters.")  #prints the length of the input
+a = float(1234)                                 #converts integer into float
+print(type(a))                                  #prints data type of a variable
+print(70 + float("100.5"))                      #converts string into float and adds an integer
+print(str(70) + str("100"))                     #converted into string and is concatenated
