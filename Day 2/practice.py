@@ -24,3 +24,11 @@ print(2 * 1)            #multiplication
 print(4 / 2)            #division, output will always be a float'
 print(4 ** 2)           #exponent
 print(1 * 2 - 1 / 3)    #PEMDASLR
+
+#number manipulation
+print(round(8 / 3, 2))          #rounds float
+print(8 // 3)                   #converts float into integer
+result = 0                      #assigns a value to an variable
+result += 1                     #manipulates previous value
+print(result)                   #prints new result
+print(f"result is {result}")    #f-string: combines string with different data types
