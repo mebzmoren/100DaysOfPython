@@ -16,3 +16,11 @@ a = float(1234)                                 #converts integer into float
 print(type(a))                                  #prints data type of a variable
 print(70 + float("100.5"))                      #converts string into float and adds an integer
 print(str(70) + str("100"))                     #converted into string and is concatenated
+
+#mathematical operations
+print(1 + 1)            #addition
+print(3 - 1)            #subtraction
+print(2 * 1)            #multiplication
+print(4 / 2)            #division, output will always be a float'
+print(4 ** 2)           #exponent
+print(1 * 2 - 1 / 3)    #PEMDASLR
