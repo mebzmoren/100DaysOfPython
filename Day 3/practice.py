@@ -53,3 +53,12 @@ if height > 100:
 else:
     print("below 100")
 print("\n")
+
+#logical operators
+a = 12
+print(a > 15)
+print(a > 10 and a < 13)
+print(a > 15 and a < 13)
+print(not a > 15)
+low = "Ellyza".lower()
+print(low.count("l"))
