@@ -26,9 +26,12 @@ print(4 ** 2)           #exponent
 print(1 * 2 - 1 / 3)    #PEMDASLR
 
 #number manipulation
-print(round(8 / 3, 2))          #rounds float
-print(8 // 3)                   #converts float into integer
-result = 0                      #assigns a value to an variable
-result += 1                     #manipulates previous value
-print(result)                   #prints new result
-print(f"result is {result}")    #f-string: combines string with different data types
+print(round(8 / 3, 2))              #rounds float
+print(8 // 3)                       #converts float into integer
+result = 0                          #assigns a value to an variable
+result += 1                         #manipulates previous value
+print(result)                       #prints new result
+print(f"result is {result}")        #f-string: combines string with different data types
+test = 12.5555                      #assigns a value to a variable
+testResult = "{:.2f}".format(test)  #another way to round a float
+print(testResult)                   #prints the result
