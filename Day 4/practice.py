@@ -32,3 +32,4 @@ words = ["yes", "naur", "maybe", "sometimes", "oftenties"]
 nest = [letters, words]                                     #combines two lists
 print(nest)
 print(nest[0][1])                                           #prints an item in a certain list
+print(random.choice(letters))                               #chooses an item from the list
