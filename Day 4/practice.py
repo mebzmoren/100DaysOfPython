@@ -22,4 +22,13 @@ list[3] = "hi"                                      #changes an intem to the lis
 print(list)
 list.extend(["goodbye", "goodmorning"])             #extends the list
 print(list)
+print(random.choice(list))                          #picks one item from the list
 print("\n")
+
+#nested lists
+letters = ["a", "b", "c", "d", "e"]
+words = ["yes", "naur", "maybe", "sometimes", "oftenties"]
+
+nest = [letters, words]                                     #combines two lists
+print(nest)
+print(nest[0][1])                                           #prints an item in a certain list
