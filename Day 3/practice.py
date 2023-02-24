@@ -64,4 +64,5 @@ low = "Ellyza".lower()
 print(low.count("l"))
 print("\n")
 
-#
+#for quotations to print
+print('You\'re choice is "left" or "right"')
