@@ -22,3 +22,8 @@ print("\n")
 x = range(3)    #prints out the range of numbers from 0 to n - 1
 for n in x:
     print(n)
+print("\n")
+
+#min max
+print(min(numbers)) #prints out the minimum number of the list
+print(max(numbers)) #prints out the maximum number of the list
