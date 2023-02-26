@@ -6,12 +6,12 @@ for n in range(0, len(student_heights)):
 
 
 #Write your code below this row 👇
-total = 0
-i = 0
+total = 0       #to get the sum of heights
+students = 0    #to get the number of students
 
-for student in student_heights:
-  total += student
-  i += 1
+for height in student_heights:
+  total += height
+  students += 1
 
-average = round(total / (n + 1))
+average = round(total / students)
 print(average)
