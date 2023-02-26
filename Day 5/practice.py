@@ -1,4 +1,4 @@
-#loops
+#for loops
 fruits = ["Apple", "Peach", "Pear"] 
 for fruit in fruits:                #will individually print the items in a list
     print(fruit)
@@ -18,12 +18,23 @@ numbers = [1, 2, 3, 4, 5]
 print(sum(numbers))         #prints the sum of a list of integers
 print("\n")
 
-#range
-x = range(3)    #prints out the range of numbers from 0 to n - 1
-for n in x:
-    print(n)
-print("\n")
-
 #min max
 print(min(numbers)) #prints out the minimum number of the list
 print(max(numbers)) #prints out the maximum number of the list
+print("\n")
+
+#range
+x = range(3)                        #prints out the range of numbers from 0 to n - 1
+for n in x:
+    print(n)
+print("\n")
+for newNumber in range(1, 10):      #another way to write
+    print(newNumber)
+print("\n")
+for newNumbers in range(1, 11, 3):  #prints out the range of numbers wit steps
+    print(newNumbers)
+print("\n")
+total = 0
+for adding in range(1, 101):
+    total += adding
+print(total)
