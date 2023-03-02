@@ -33,3 +33,9 @@ print("\n")
 
 #Keyword arguement
 greetWith(location = "Sibulan", name = "Ellyza")
+print("\n")
+
+#math module
+import math
+
+print(math.ceil(3.2))   #rounds up a number

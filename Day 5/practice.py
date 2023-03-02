@@ -38,6 +38,3 @@ total = 0
 for adding in range(1, 101):
     total += adding
 print(total)
-
-#combines list lists
-print(*numbers, sep="")
