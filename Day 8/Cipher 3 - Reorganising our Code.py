@@ -9,23 +9,20 @@ shift = int(input("Type the shift number:\n"))
 def caesar(direction, text, shift):
     cipher = []
 
-    if direction == "encode":
-        for letter in text:
-            i = alphabet.index(letter)
+    for letter in text:
+        i =  alphabet.index(letter)
+
+        if direction == "encode":
             j = i + shift
-            cipher.append(alphabet[j])
-    else:
-        for letter in text:
-            i = alphabet.index(letter)
+        else:
             j = i - shift
 
-            if j > 0:
-                cipher.append(alphabet[j])
-            else:
+            if j <= 0:
                 j = j * 2 + shift
-                cipher.append(alphabet[j])
 
-    print(f"The decoded text is {''.join(cipher)}")
+        cipher.append(alphabet[j])
+        
+    print(f"The {direction}d text is {''.join(cipher)}")
 
 #TODO-2: Call the caesar() function, passing over the 'text', 'shift' and 'direction' values.
-caesar(direction = direction, text = text, shift = shift)
+caesar(direction, text, shift)
