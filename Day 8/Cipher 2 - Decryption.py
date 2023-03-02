@@ -24,7 +24,7 @@ def decrypt(text, shift):
         if j > 0:
             cipher.append(alphabet[j])
         else:
-            j = j * 2 - -shift
+            j = j * 2 + shift
             cipher.append(alphabet[j])
 
     print(f"The decoded text is {''.join(cipher)}")
@@ -36,7 +36,7 @@ def decrypt(text, shift):
 
 
 #TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
-if direction is "encrypt":
+if direction == "encrypt":
     encrypt(plain_text=text, shift_amount=shift)
 else:
     decrypt(text, shift)
