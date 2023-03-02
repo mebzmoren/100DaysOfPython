@@ -38,3 +38,6 @@ total = 0
 for adding in range(1, 101):
     total += adding
 print(total)
+print("\n")
+
+print(*numbers, sep="") #prints list without commas & brackets

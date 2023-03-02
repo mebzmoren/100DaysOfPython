@@ -17,10 +17,16 @@ def encrypt(text, shift):
 #cipher_text = "mjqqt"
 #print output: "The encoded text is mjqqt"
     cipher = []
+
     for letter in text:
         i = alphabet.index(letter)
         j = i + shift
-        cipher.append(alphabet[j])
+
+        if j < len(alphabet):
+            cipher.append(alphabet[j])
+        else:
+            k = i - len(alphabet) + shift
+            cipher.append(alphabet[k])
     print(f"The encoded text is {''.join(cipher)}")
 ##HINT: How do you get the index of an item in a list:
 #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
