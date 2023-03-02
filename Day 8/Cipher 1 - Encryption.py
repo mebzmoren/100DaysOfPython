@@ -19,8 +19,8 @@ def encrypt(text, shift):
     cipher = []
 
     for letter in text:
-        i = alphabet.index(letter)
-        j = i + shift
+        i = alphabet.index(letter)  #position of the letter in the list of alphabets
+        j = i + shift   #new position of the letter in the list of alphabets
 
         if j < len(alphabet):
             cipher.append(alphabet[j])

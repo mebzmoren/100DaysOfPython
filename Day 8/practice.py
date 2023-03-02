@@ -39,3 +39,9 @@ print("\n")
 import math
 
 print(math.ceil(3.2))   #rounds up a number
+print("\n")
+
+#index
+numbers = [1, 2, 3, 4, 5]
+
+print(numbers.index(2))
