@@ -17,11 +17,31 @@ operations = {
     "/": divide
 }
 
-num1 = int(input("What's the first number?: "))
-num2 = int(input("What's the second number?: "))
+def calculator():
+    num1 = float(input("What's the first number?: "))
+    prompt = "y"
 
-for operation in operations:
-    print(operation)
+    for operation in operations:
+        print(operation)
 
-# funct = operations[operator]
-# funct(num1, num2)
+    while prompt == "y":
+        operator = input("Pick an operation: ")
+        num2 = float(input("What's the next number?: "))
+
+        funct = operations[operator]
+        answer = funct(num1, num2)
+
+        print(f"{num1} {operator} {num2} = {answer}")
+
+        prompt = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ")
+        
+        if prompt == "y":
+            num1 = answer
+        else:
+            calculator()
+    
+    return prompt
+
+from art import logo
+print(logo)
+calculator()
