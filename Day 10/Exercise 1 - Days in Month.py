@@ -18,8 +18,6 @@ def days_in_month(y, m):
   else:
     month_days[1] = 29
     return month_days[m - 1]
-
-  
   
 #🚨 Do NOT change any of the code below 
 year = int(input("Enter a year: "))
