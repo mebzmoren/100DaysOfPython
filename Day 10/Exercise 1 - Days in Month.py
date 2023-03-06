@@ -23,6 +23,6 @@ def days_in_month(y, m):
   
 #🚨 Do NOT change any of the code below 
 year = int(input("Enter a year: "))
-month = int(input("Enter a month: "))
+month = int(input("En10ter a month: "))
 days = days_in_month(year, month)
 print(days)
