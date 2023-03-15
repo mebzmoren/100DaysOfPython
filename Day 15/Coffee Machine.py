@@ -51,9 +51,19 @@ def menu_prompt():
     return order
     
 def check_resources(order):
-    machine = []
-    required = []
-    required.append(MENU[order]['ingredients'])
+    if order == "espresso":
+        if MENU[order]['ingredients']['water'] <= resources["water"] and MENU[order]['ingredients']['coffee'] <= resources["coffee"]:
+            return False
+    if MENU[order]['ingredients']['water'] <= resources["water"] and MENU[order]['ingredients']['milk'] <= resources["milk"] and MENU[order]['ingredients']['coffee'] <= resources["coffee"]:
+        return False
+    else:
+        return True
+    
+def check_money(money, order):
+    if MENU[order]['cost'] < money:
+        return False
+    else:
+        return True
 
     
 def check_prompt(order):
@@ -68,10 +78,14 @@ def check_prompt(order):
         return False
     elif order == "off":
         return True
-    
-    
+    elif check_resources(order) == False:
+        if check_money(money, order) == False:
+            #some action
+        return False
+    elif check_resources(order) == True:
+        #some action
+        return True
 
 while not done:
     order = menu_prompt()
     done = check_prompt(order)
-    check_resources(order)
