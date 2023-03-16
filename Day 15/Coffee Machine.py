@@ -30,9 +30,7 @@ resources = {
     "coffee": 100,
 }
 
-done = False
-money = 0
-user_money = 0
+
 
 def menu_prompt():
     order = input(f"What would you like? (espresso/latte/cappuccino): ")
@@ -80,7 +78,7 @@ def check_money(order, user_money):
         return False
     
 
-def check_prompt(order, user_money):
+def check_prompt(order, user_money, money):
     if order == "report":
         for key in resources:
             if key == "coffee":
@@ -104,17 +102,24 @@ def make_coffee(order, dictionary, available, money):
         available['water'] -= dictionary[order]['ingredients']['water']
         available['coffee'] -= dictionary[order]['ingredients']['coffee']
         money += dictionary[order]['cost']
+        print(f"Here is your {order}. Enjoy!")
         return money
     elif order == "latte" or order == "cappuccino":
         available['water'] -= dictionary[order]['ingredients']['water']
         available['milk'] -= dictionary[order]['ingredients']['milk']
         available['coffee'] -= dictionary[order]['ingredients']['coffee']
         money += dictionary[order]['cost']
+        print(f"Here is your {order}. Enjoy!")
         return money
-    print(f"Here is your {order}. Enjoy!")
 
-while not done:
-    order = menu_prompt()
-    done = check_prompt(order, user_money)
-    if done == False:
+def machine():
+    done = False
+    money = 0
+    user_money = 0
+
+    while not done:
+        order = menu_prompt()
+        done = check_prompt(order, user_money, money)
         money = make_coffee(order, MENU, resources, money)
+
+machine()
